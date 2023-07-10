@@ -15,20 +15,23 @@ generatePaymentLink($inline_object3): \belenka\Everifin\Client\Model\InlineRespo
 
 Generate Payment Link
 
-Generate Payment Link
-
 ### Example
 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new belenka\Everifin\Client\Api\RedirectFlowApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$inline_object3 = new \belenka\Everifin\Client\Model\InlineObject3(); // \belenka\Everifin\Client\Model\InlineObject3
+$token = $response->getAccessToken(); // Response from getClientAccessToken
+
+$configuration = new \belenka\Everifin\Client\Configuration();
+$configuration->setHost('https://pay.stage.everifin.com');
+$configuration->setAccessToken($token);
+
+$client = new \GuzzleHttp\Client();
+
+$apiInstance = new \belenka\Everifin\Client\Api\RedirectFlowApi($client, $configuration);
+
+$inline_object3 = new \belenka\Everifin\Client\Model\InlineObject3(); 
 
 try {
     $result = $apiInstance->generatePaymentLink($inline_object3);

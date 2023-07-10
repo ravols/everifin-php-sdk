@@ -22,14 +22,19 @@ Init Payment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new belenka\Everifin\Client\Api\EmbeddedFlowApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$x_ef_sender_ip = '10.1.1.1'; // string
-$x_ef_sender_user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.0) AppleWebKit/536.1.2 (KHTML, like Gecko) Chrome/39.0.812.0 Safari/536.1.2'; // string
-$inline_object1 = new \belenka\Everifin\Client\Model\InlineObject1(); // \belenka\Everifin\Client\Model\InlineObject1
+$token = $response->getAccessToken(); // Response from getClientAccessToken
+
+$configuration = new \belenka\Everifin\Client\Configuration();
+$configuration->setHost('https://pay.stage.everifin.com');
+$configuration->setAccessToken($token);
+
+$client = new \GuzzleHttp\Client();
+
+$apiInstance = new \belenka\Everifin\Client\Api\EmbeddedFlowApi($client, $configuration);
+
+$x_ef_sender_ip = '10.1.1.1';
+$x_ef_sender_user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.0) AppleWebKit/536.1.2 (KHTML, like Gecko) Chrome/39.0.812.0 Safari/536.1.2'; 
+$inline_object1 = new \belenka\Everifin\Client\Model\InlineObject1();
 
 try {
     $result = $apiInstance->initPayment($x_ef_sender_ip, $x_ef_sender_user_agent, $inline_object1);
@@ -79,13 +84,18 @@ Process Payment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new belenka\Everifin\Client\Api\EmbeddedFlowApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$id = '{{payment_id}}'; // string
-$inline_object2 = new \belenka\Everifin\Client\Model\InlineObject2(); // \belenka\Everifin\Client\Model\InlineObject2
+$token = $response->getAccessToken(); // Response from getClientAccessToken
+
+$configuration = new \belenka\Everifin\Client\Configuration();
+$configuration->setHost('https://pay.stage.everifin.com');
+$configuration->setAccessToken($token);
+
+$client = new \GuzzleHttp\Client();
+
+$apiInstance = new \belenka\Everifin\Client\Api\EmbeddedFlowApi($client, $configuration);
+
+$id = '{{payment_id}}'; 
+$inline_object2 = new \belenka\Everifin\Client\Model\InlineObject2();
 
 try {
     $result = $apiInstance->processPayment($id, $inline_object2);

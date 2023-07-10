@@ -5,13 +5,8 @@
  *
  * @category Class
  * @package  belenka\Everifin\Client
-
  * 
  */
-
-
-
-
 
 namespace belenka\Everifin\Client\Api;
 

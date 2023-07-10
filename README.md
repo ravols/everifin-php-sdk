@@ -40,11 +40,46 @@ require_once('/path/to/vendor/autoload.php');
 
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
+## Get access token
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new belenka\Everifin\Client\Api\EmbeddedFlowApi();
+$configuration = new \belenka\Everifin\Client\Configuration();
+$configuration->setHost('https://app.stage.everifin.com');
+$client = new \GuzzleHttp\Client();
+$apiInstance = new \belenka\Everifin\Client\Api\GeneralApi($client, $configuration);
+
+$client_id = 'client_id_example';
+$client_secret = 'client_secret_example';
+$grant_type = 'client_credentials';
+
+try {
+    $response = $apiInstance->getClientAccessToken($client_id, $client_secret, $grant_type);
+    print_r($response);
+    print_r($response->getAccessToken());
+} catch (Exception $e) {
+    echo 'Exception when calling GeneralApi->getClientAccessToken: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+## Init payment
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$token = $response->getAccessToken(); // Response from getClientAccessToken
+
+$configuration = new \belenka\Everifin\Client\Configuration();
+$configuration->setHost('https://pay.stage.everifin.com');
+$configuration->setAccessToken($token);
+
+$client = new \GuzzleHttp\Client();
+
+$apiInstance = new \belenka\Everifin\Client\Api\EmbeddedFlowApi($client, $configuration);
+
 $x_ef_sender_ip = '10.1.1.1'; // string
 $x_ef_sender_user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.0) AppleWebKit/536.1.2 (KHTML, like Gecko) Chrome/39.0.812.0 Safari/536.1.2'; // string
 $inline_object1 = new \belenka\Everifin\Client\Model\InlineObject1();
@@ -60,7 +95,7 @@ try {
 
 ## API Endpoints
 
-All URIs are relative to *https://app.stage.everifin.com*
+URIs are relative to *https://app.stage.everifin.com* or *https://pay.stage.everifin.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

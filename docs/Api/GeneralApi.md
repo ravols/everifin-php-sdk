@@ -19,22 +19,20 @@ getClientAccessToken($client_id, $client_secret, $grant_type): \belenka\Everifin
 
 Get Client Access Token
 
-Get Client Access Token
-
 ### Example
 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$client_id = 'client_id_example'; // string
-$client_secret = 'client_secret_example'; // string
-$grant_type = 'client_credentials'; // string
+$configuration = new \belenka\Everifin\Client\Configuration();
+$configuration->setHost('https://app.stage.everifin.com');
+$client = new \GuzzleHttp\Client();
+$apiInstance = new \belenka\Everifin\Client\Api\GeneralApi($client, $configuration);
+
+$client_id = 'client_id_example';
+$client_secret = 'client_secret_example';
+$grant_type = 'client_credentials';
 
 try {
     $result = $apiInstance->getClientAccessToken($client_id, $client_secret, $grant_type);
@@ -86,12 +84,16 @@ This endpoint provides list of available banks for payments.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new \GuzzleHttp\Client()
-);
-$country_code = 'CZE'; // string | Alpha 3 country code
+$token = $response->getAccessToken(); // Response from getClientAccessToken
+
+$configuration = new \belenka\Everifin\Client\Configuration();
+$configuration->setHost('https://pay.stage.everifin.com');
+$configuration->setAccessToken($token);
+
+$client = new \GuzzleHttp\Client();
+
+$apiInstance = new \belenka\Everifin\Client\Api\GeneralApi($client, $configuration);
+$country_code = 'CZE'; // Alpha 3 country code
 
 try {
     $result = $apiInstance->getClientBanks($country_code);
@@ -140,11 +142,16 @@ Endpoint to get detailed info about a single payment from Everifin PayGate.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
+$token = $response->getAccessToken(); // Response from getClientAccessToken
+
+$configuration = new \belenka\Everifin\Client\Configuration();
+$configuration->setHost('https://pay.stage.everifin.com');
+$configuration->setAccessToken($token);
+
+$client = new \GuzzleHttp\Client();
+
+$apiInstance = new \belenka\Everifin\Client\Api\GeneralApi($client, $configuration);
+
 $id = '{{payment_id}}'; // string
 
 try {
@@ -194,15 +201,20 @@ Endpoint to get payments from Everifin PayGate.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
+$token = $response->getAccessToken(); // Response from getClientAccessToken
+
+$configuration = new \belenka\Everifin\Client\Configuration();
+$configuration->setHost('https://pay.stage.everifin.com');
+$configuration->setAccessToken($token);
+
+$client = new \GuzzleHttp\Client();
+
+$apiInstance = new \belenka\Everifin\Client\Api\GeneralApi($client, $configuration);
+
 $page = 1; // string
 $count_per_page = 5; // string
 $sort = 'amount:desc'; // string
-$id = '09182dc1-a8ea-4b71-9d24-a6142cf5b946'; // string
+$id = '09182dc1-a8ea-4b71-9d24-a6142cf51234'; // string
 $instruction_id = 1; // string
 $recipient_iban = 1; // string
 $sender_bank_id = 1; // string
@@ -280,11 +292,16 @@ Endpoint to withdraw a payment from Everifin payment gate, before it has been au
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
+$token = $response->getAccessToken(); // Response from getClientAccessToken
+
+$configuration = new \belenka\Everifin\Client\Configuration();
+$configuration->setHost('https://pay.stage.everifin.com');
+$configuration->setAccessToken($token);
+
+$client = new \GuzzleHttp\Client();
+
+$apiInstance = new \belenka\Everifin\Client\Api\GeneralApi($client, $configuration);
+
 $id = '{{payment_id}}'; // string
 
 try {
