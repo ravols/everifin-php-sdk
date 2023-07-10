@@ -64,7 +64,43 @@ try {
 }
 ```
 
-## Init payment
+## Generate Payment Link
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$token = $response->getAccessToken(); // Response from getClientAccessToken
+
+$configuration = new \belenka\Everifin\Client\Configuration();
+$configuration->setHost('https://pay.stage.everifin.com');
+$configuration->setAccessToken($token);
+
+$client = new \GuzzleHttp\Client();
+
+$apiInstance = new \belenka\Everifin\Client\Api\RedirectFlowApi($client, $configuration);
+
+$paymentLinkData = new \belenka\Everifin\Client\Model\PaymentLinkData(); 
+$paymentLinkData->setAmount(123);
+$paymentLinkData->setConstantSymbol('123');
+$paymentLinkData->setCurrency('EUR');
+$paymentLinkData->setPaymentMessage('test');
+$paymentLinkData->setRecipientIban('SK8709000000001231231234');
+$paymentLinkData->setRecipientName('Belenka');
+$paymentLinkData->setRedirectUrl('https://www.belenka.sk/kosik');
+$paymentLinkData->setSpecificSymbol('123456');
+$paymentLinkData->setUserLocale('sk');
+$paymentLinkData->setVariableSymbol('123456789');
+
+try {
+    $result = $apiInstance->generatePaymentLink($paymentLinkData);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RedirectFlowApi->generatePaymentLink: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+## Init embed payment
 
 ```php
 <?php
