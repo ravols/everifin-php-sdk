@@ -16,23 +16,19 @@ initPayment($x_ef_sender_ip, $x_ef_sender_user_agent, $inline_object1): \belenka
 
 Init Payment
 
-Init Payment
-
 ### Example
 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
-
 $apiInstance = new belenka\Everifin\Client\Api\EmbeddedFlowApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_ef_sender_ip = 10.1.1.1; // string
-$x_ef_sender_user_agent = Mozilla/5.0 (Windows; U; Windows NT 5.0) AppleWebKit/536.1.2 (KHTML, like Gecko) Chrome/39.0.812.0 Safari/536.1.2; // string
+$x_ef_sender_ip = '10.1.1.1'; // string
+$x_ef_sender_user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.0) AppleWebKit/536.1.2 (KHTML, like Gecko) Chrome/39.0.812.0 Safari/536.1.2'; // string
 $inline_object1 = new \belenka\Everifin\Client\Model\InlineObject1(); // \belenka\Everifin\Client\Model\InlineObject1
 
 try {
@@ -76,7 +72,6 @@ processPayment($id, $inline_object2): \belenka\Everifin\Client\Model\InlineRespo
 
 Process Payment
 
-Process Payment
 
 ### Example
 
@@ -84,14 +79,12 @@ Process Payment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
-
 $apiInstance = new belenka\Everifin\Client\Api\EmbeddedFlowApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = {{payment_id}}; // string
+$id = '{{payment_id}}'; // string
 $inline_object2 = new \belenka\Everifin\Client\Model\InlineObject2(); // \belenka\Everifin\Client\Model\InlineObject2
 
 try {

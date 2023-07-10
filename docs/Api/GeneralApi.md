@@ -34,11 +34,12 @@ $apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
 );
 $client_id = 'client_id_example'; // string
 $client_secret = 'client_secret_example'; // string
-$grant_type = 'grant_type_example'; // string
+$grant_type = 'client_credentials'; // string
 
 try {
     $result = $apiInstance->getClientAccessToken($client_id, $client_secret, $grant_type);
     print_r($result);
+    print_r($result->getAccessToken());
 } catch (Exception $e) {
     echo 'Exception when calling GeneralApi->getClientAccessToken: ', $e->getMessage(), PHP_EOL;
 }
@@ -88,9 +89,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new \GuzzleHttp\Client()
 );
-$country_code = CZE; // string | Alpha 3 country code
+$country_code = 'CZE'; // string | Alpha 3 country code
 
 try {
     $result = $apiInstance->getClientBanks($country_code);
@@ -144,7 +145,7 @@ $apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = {{payment_id}}; // string
+$id = '{{payment_id}}'; // string
 
 try {
     $result = $apiInstance->getPaymentDetail($id);
@@ -200,20 +201,20 @@ $apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
 );
 $page = 1; // string
 $count_per_page = 5; // string
-$sort = amount:desc; // string
-$id = 09182dc1-a8ea-4b71-9d24-a6142cf5b946; // string
+$sort = 'amount:desc'; // string
+$id = '09182dc1-a8ea-4b71-9d24-a6142cf5b946'; // string
 $instruction_id = 1; // string
 $recipient_iban = 1; // string
 $sender_bank_id = 1; // string
 $amount = 1; // string
-$currency = CZK; // string
+$currency = 'CZK'; // string
 $variable_symbol = 1; // string
 $specific_symbol = 1; // string
 $constant_symbol = 1; // string
 $reference = 1; // string
 $payment_message = 1; // string
-$status = CREATED; // string
-$step = FINISHED; // string
+$status = 'CREATED'; // string
+$step = 'FINISHED'; // string
 $redirect_url = 1; // string
 
 try {
@@ -284,7 +285,7 @@ $apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = {{payment_id}}; // string
+$id = '{{payment_id}}'; // string
 
 try {
     $result = $apiInstance->withdrawPayment($id);

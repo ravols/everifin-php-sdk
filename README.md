@@ -44,12 +44,8 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new belenka\Everifin\Client\Api\EmbeddedFlowApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$x_ef_sender_ip = 10.1.1.1; // string
+$apiInstance = new belenka\Everifin\Client\Api\EmbeddedFlowApi();
+$x_ef_sender_ip = '10.1.1.1'; // string
 $x_ef_sender_user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.0) AppleWebKit/536.1.2 (KHTML, like Gecko) Chrome/39.0.812.0 Safari/536.1.2'; // string
 $inline_object1 = new \belenka\Everifin\Client\Model\InlineObject1();
 
