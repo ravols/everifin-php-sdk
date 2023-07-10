@@ -1,4 +1,5 @@
 {
+    "name": "be-lenka/everifin-php-sdk",
     "description": "Everifin php sdk",
     "keywords": [
         "everifin",
@@ -13,7 +14,8 @@
     "authors": [
         {
             "name": "BeLenka Dev",
-            "homepage": "https://www.belenka.com"
+            "homepage": "https://www.belenka.com",
+            "email": "dev+hello@belenka.dev"
         }
     ],
     "require": {
