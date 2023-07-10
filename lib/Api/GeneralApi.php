@@ -5,14 +5,7 @@
  *
  * @category Class
  * @package  belenka\Everifin\Client
-
- * 
  */
-
-
-
-
-
 namespace belenka\Everifin\Client\Api;
 
 use GuzzleHttp\Client;
@@ -32,8 +25,6 @@ use belenka\Everifin\Client\ObjectSerializer;
  *
  * @category Class
  * @package  belenka\Everifin\Client
-
- * 
  */
 class GeneralApi
 {

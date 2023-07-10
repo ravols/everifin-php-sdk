@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineObject1Test
+ * PaymentEmbedDataTest
  *
  * PHP version 7.3
  *
@@ -19,14 +19,14 @@ namespace belenka\Everifin\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * InlineObject1Test Class Doc Comment
+ * PaymentEmbedDataTest Class Doc Comment
  *
  * @category    Class
- * @description InlineObject1
+ * @description PaymentEmbedData
  * @package     belenka\Everifin\Client
 
  */
-class InlineObject1Test extends TestCase
+class PaymentEmbedDataTest extends TestCase
 {
 
     /**
@@ -58,9 +58,9 @@ class InlineObject1Test extends TestCase
     }
 
     /**
-     * Test "InlineObject1"
+     * Test "PaymentEmbedData"
      */
-    public function testInlineObject1()
+    public function testPaymentEmbedData()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

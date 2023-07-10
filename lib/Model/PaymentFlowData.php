@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineObject2
+ * PaymentFlowData
  *
  * PHP version 7.3
  *
@@ -20,7 +20,7 @@ use \ArrayAccess;
 use \belenka\Everifin\Client\ObjectSerializer;
 
 /**
- * InlineObject2 Class Doc Comment
+ * PaymentFlowData Class Doc Comment
  *
  * @category Class
  * @package  belenka\Everifin\Client
@@ -30,7 +30,7 @@ use \belenka\Everifin\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class InlineObject2 implements ModelInterface, ArrayAccess, \JsonSerializable
+class PaymentFlowData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 

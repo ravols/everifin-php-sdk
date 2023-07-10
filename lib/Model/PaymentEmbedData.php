@@ -1,26 +1,20 @@
 <?php
 /**
- * InlineObject1
+ * PaymentEmbedData
  *
  * PHP version 7.3
  *
  * @category Class
  * @package  belenka\Everifin\Client
-
  * 
  */
-
-
-
-
-
 namespace belenka\Everifin\Client\Model;
 
 use \ArrayAccess;
 use \belenka\Everifin\Client\ObjectSerializer;
 
 /**
- * InlineObject1 Class Doc Comment
+ * PaymentEmbedData Class Doc Comment
  *
  * @category Class
  * @package  belenka\Everifin\Client
@@ -30,7 +24,7 @@ use \belenka\Everifin\Client\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class InlineObject1 implements ModelInterface, ArrayAccess, \JsonSerializable
+class PaymentEmbedData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -39,7 +33,7 @@ class InlineObject1 implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'inline_object_1';
+    protected static $openAPIModelName = 'payment_embed_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

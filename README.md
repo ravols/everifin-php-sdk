@@ -82,10 +82,10 @@ $apiInstance = new \belenka\Everifin\Client\Api\EmbeddedFlowApi($client, $config
 
 $x_ef_sender_ip = '10.1.1.1'; // string
 $x_ef_sender_user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.0) AppleWebKit/536.1.2 (KHTML, like Gecko) Chrome/39.0.812.0 Safari/536.1.2'; // string
-$inline_object1 = new \belenka\Everifin\Client\Model\InlineObject1();
+$PaymentEmbedData = new \belenka\Everifin\Client\Model\PaymentEmbedData();
 
 try {
-    $result = $apiInstance->initPayment($x_ef_sender_ip, $x_ef_sender_user_agent, $inline_object1);
+    $result = $apiInstance->initPayment($x_ef_sender_ip, $x_ef_sender_user_agent, $PaymentEmbedData);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EmbeddedFlowApi->initPayment: ', $e->getMessage(), PHP_EOL;
@@ -110,8 +110,8 @@ Class | Method | HTTP request | Description
 
 ## Models
 
-- [InlineObject1](docs/Model/InlineObject1.md)
-- [InlineObject2](docs/Model/InlineObject2.md)
+- [PaymentEmbedData](docs/Model/PaymentEmbedData.md)
+- [PaymentFlowData](docs/Model/PaymentFlowData.md)
 - [PaymentLinkData](docs/Model/PaymentLinkData.md)
 - [InlineResponse200](docs/Model/InlineResponse200.md)
 - [InlineResponse2001](docs/Model/InlineResponse2001.md)

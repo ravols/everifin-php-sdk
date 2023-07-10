@@ -5,9 +5,7 @@
  *
  * @category Class
  * @package  belenka\Everifin\Client
- * 
  */
-
 namespace belenka\Everifin\Client\Api;
 
 use GuzzleHttp\Client;
@@ -27,8 +25,6 @@ use belenka\Everifin\Client\ObjectSerializer;
  *
  * @category Class
  * @package  belenka\Everifin\Client
-
- * 
  */
 class EmbeddedFlowApi
 {
@@ -105,15 +101,15 @@ class EmbeddedFlowApi
      *
      * @param  string $x_ef_sender_ip x_ef_sender_ip (optional)
      * @param  string $x_ef_sender_user_agent x_ef_sender_user_agent (optional)
-     * @param  \belenka\Everifin\Client\Model\InlineObject1 $inline_object1 inline_object1 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentEmbedData $PaymentEmbedData PaymentEmbedData (optional)
      *
      * @throws \belenka\Everifin\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \belenka\Everifin\Client\Model\InlineResponse2003|\belenka\Everifin\Client\Model\InlineResponse4001|\belenka\Everifin\Client\Model\InlineResponse401
      */
-    public function initPayment($x_ef_sender_ip = null, $x_ef_sender_user_agent = null, $inline_object1 = null)
+    public function initPayment($x_ef_sender_ip = null, $x_ef_sender_user_agent = null, $PaymentEmbedData = null)
     {
-        list($response) = $this->initPaymentWithHttpInfo($x_ef_sender_ip, $x_ef_sender_user_agent, $inline_object1);
+        list($response) = $this->initPaymentWithHttpInfo($x_ef_sender_ip, $x_ef_sender_user_agent, $PaymentEmbedData);
         return $response;
     }
 
@@ -124,15 +120,15 @@ class EmbeddedFlowApi
      *
      * @param  string $x_ef_sender_ip (optional)
      * @param  string $x_ef_sender_user_agent (optional)
-     * @param  \belenka\Everifin\Client\Model\InlineObject1 $inline_object1 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentEmbedData $PaymentEmbedData (optional)
      *
      * @throws \belenka\Everifin\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \belenka\Everifin\Client\Model\InlineResponse2003|\belenka\Everifin\Client\Model\InlineResponse4001|\belenka\Everifin\Client\Model\InlineResponse401, HTTP status code, HTTP response headers (array of strings)
      */
-    public function initPaymentWithHttpInfo($x_ef_sender_ip = null, $x_ef_sender_user_agent = null, $inline_object1 = null)
+    public function initPaymentWithHttpInfo($x_ef_sender_ip = null, $x_ef_sender_user_agent = null, $PaymentEmbedData = null)
     {
-        $request = $this->initPaymentRequest($x_ef_sender_ip, $x_ef_sender_user_agent, $inline_object1);
+        $request = $this->initPaymentRequest($x_ef_sender_ip, $x_ef_sender_user_agent, $PaymentEmbedData);
 
         try {
             $options = $this->createHttpClientOption();
@@ -259,14 +255,14 @@ class EmbeddedFlowApi
      *
      * @param  string $x_ef_sender_ip (optional)
      * @param  string $x_ef_sender_user_agent (optional)
-     * @param  \belenka\Everifin\Client\Model\InlineObject1 $inline_object1 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentEmbedData $PaymentEmbedData (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function initPaymentAsync($x_ef_sender_ip = null, $x_ef_sender_user_agent = null, $inline_object1 = null)
+    public function initPaymentAsync($x_ef_sender_ip = null, $x_ef_sender_user_agent = null, $PaymentEmbedData = null)
     {
-        return $this->initPaymentAsyncWithHttpInfo($x_ef_sender_ip, $x_ef_sender_user_agent, $inline_object1)
+        return $this->initPaymentAsyncWithHttpInfo($x_ef_sender_ip, $x_ef_sender_user_agent, $PaymentEmbedData)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -281,15 +277,15 @@ class EmbeddedFlowApi
      *
      * @param  string $x_ef_sender_ip (optional)
      * @param  string $x_ef_sender_user_agent (optional)
-     * @param  \belenka\Everifin\Client\Model\InlineObject1 $inline_object1 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentEmbedData $PaymentEmbedData (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function initPaymentAsyncWithHttpInfo($x_ef_sender_ip = null, $x_ef_sender_user_agent = null, $inline_object1 = null)
+    public function initPaymentAsyncWithHttpInfo($x_ef_sender_ip = null, $x_ef_sender_user_agent = null, $PaymentEmbedData = null)
     {
         $returnType = '\belenka\Everifin\Client\Model\InlineResponse2003';
-        $request = $this->initPaymentRequest($x_ef_sender_ip, $x_ef_sender_user_agent, $inline_object1);
+        $request = $this->initPaymentRequest($x_ef_sender_ip, $x_ef_sender_user_agent, $PaymentEmbedData);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -329,12 +325,12 @@ class EmbeddedFlowApi
      *
      * @param  string $x_ef_sender_ip (optional)
      * @param  string $x_ef_sender_user_agent (optional)
-     * @param  \belenka\Everifin\Client\Model\InlineObject1 $inline_object1 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentEmbedData $PaymentEmbedData (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function initPaymentRequest($x_ef_sender_ip = null, $x_ef_sender_user_agent = null, $inline_object1 = null)
+    public function initPaymentRequest($x_ef_sender_ip = null, $x_ef_sender_user_agent = null, $PaymentEmbedData = null)
     {
 
         $resourcePath = '/api/v1/payments';
@@ -368,11 +364,11 @@ class EmbeddedFlowApi
         }
 
         // for model (json/xml)
-        if (isset($inline_object1)) {
+        if (isset($PaymentEmbedData)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($inline_object1));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($PaymentEmbedData));
             } else {
-                $httpBody = $inline_object1;
+                $httpBody = $PaymentEmbedData;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -429,15 +425,15 @@ class EmbeddedFlowApi
      * Process Payment
      *
      * @param  string $id id (required)
-     * @param  \belenka\Everifin\Client\Model\InlineObject2 $inline_object2 inline_object2 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentFlowData $PaymentFlowData PaymentFlowData (optional)
      *
      * @throws \belenka\Everifin\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \belenka\Everifin\Client\Model\InlineResponse2006|\belenka\Everifin\Client\Model\InlineResponse4003|\belenka\Everifin\Client\Model\InlineResponse401|\belenka\Everifin\Client\Model\InlineResponse422
      */
-    public function processPayment($id, $inline_object2 = null)
+    public function processPayment($id, $PaymentFlowData = null)
     {
-        list($response) = $this->processPaymentWithHttpInfo($id, $inline_object2);
+        list($response) = $this->processPaymentWithHttpInfo($id, $PaymentFlowData);
         return $response;
     }
 
@@ -447,15 +443,15 @@ class EmbeddedFlowApi
      * Process Payment
      *
      * @param  string $id (required)
-     * @param  \belenka\Everifin\Client\Model\InlineObject2 $inline_object2 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentFlowData $PaymentFlowData (optional)
      *
      * @throws \belenka\Everifin\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \belenka\Everifin\Client\Model\InlineResponse2006|\belenka\Everifin\Client\Model\InlineResponse4003|\belenka\Everifin\Client\Model\InlineResponse401|\belenka\Everifin\Client\Model\InlineResponse422, HTTP status code, HTTP response headers (array of strings)
      */
-    public function processPaymentWithHttpInfo($id, $inline_object2 = null)
+    public function processPaymentWithHttpInfo($id, $PaymentFlowData = null)
     {
-        $request = $this->processPaymentRequest($id, $inline_object2);
+        $request = $this->processPaymentRequest($id, $PaymentFlowData);
 
         try {
             $options = $this->createHttpClientOption();
@@ -601,14 +597,14 @@ class EmbeddedFlowApi
      * Process Payment
      *
      * @param  string $id (required)
-     * @param  \belenka\Everifin\Client\Model\InlineObject2 $inline_object2 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentFlowData $PaymentFlowData (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function processPaymentAsync($id, $inline_object2 = null)
+    public function processPaymentAsync($id, $PaymentFlowData = null)
     {
-        return $this->processPaymentAsyncWithHttpInfo($id, $inline_object2)
+        return $this->processPaymentAsyncWithHttpInfo($id, $PaymentFlowData)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -622,15 +618,15 @@ class EmbeddedFlowApi
      * Process Payment
      *
      * @param  string $id (required)
-     * @param  \belenka\Everifin\Client\Model\InlineObject2 $inline_object2 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentFlowData $PaymentFlowData (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function processPaymentAsyncWithHttpInfo($id, $inline_object2 = null)
+    public function processPaymentAsyncWithHttpInfo($id, $PaymentFlowData = null)
     {
         $returnType = '\belenka\Everifin\Client\Model\InlineResponse2006';
-        $request = $this->processPaymentRequest($id, $inline_object2);
+        $request = $this->processPaymentRequest($id, $PaymentFlowData);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -669,12 +665,12 @@ class EmbeddedFlowApi
      * Create request for operation 'processPayment'
      *
      * @param  string $id (required)
-     * @param  \belenka\Everifin\Client\Model\InlineObject2 $inline_object2 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentFlowData $PaymentFlowData (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function processPaymentRequest($id, $inline_object2 = null)
+    public function processPaymentRequest($id, $PaymentFlowData = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
@@ -714,11 +710,11 @@ class EmbeddedFlowApi
         }
 
         // for model (json/xml)
-        if (isset($inline_object2)) {
+        if (isset($PaymentFlowData)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($inline_object2));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($PaymentFlowData));
             } else {
-                $httpBody = $inline_object2;
+                $httpBody = $PaymentFlowData;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
