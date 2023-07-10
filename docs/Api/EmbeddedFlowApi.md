@@ -1,6 +1,6 @@
 # belenka\Everifin\Client\EmbeddedFlowApi
 
-All URIs are relative to https://app.stage.everifin.com.
+All URIs are relative to https://pay.stage.everifin.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
