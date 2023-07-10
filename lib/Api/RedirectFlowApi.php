@@ -100,15 +100,15 @@ class RedirectFlowApi
      *
      * Generate Payment Link
      *
-     * @param  \belenka\Everifin\Client\Model\InlineObject3 $inline_object3 inline_object3 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentLinkData $PaymentLinkData PaymentLinkData (optional)
      *
      * @throws \belenka\Everifin\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \belenka\Everifin\Client\Model\InlineResponse2007|\belenka\Everifin\Client\Model\InlineResponse401|\belenka\Everifin\Client\Model\InlineResponse4221
      */
-    public function generatePaymentLink($inline_object3 = null)
+    public function generatePaymentLink($PaymentLinkData = null)
     {
-        list($response) = $this->generatePaymentLinkWithHttpInfo($inline_object3);
+        list($response) = $this->generatePaymentLinkWithHttpInfo($PaymentLinkData);
         return $response;
     }
 
@@ -117,15 +117,15 @@ class RedirectFlowApi
      *
      * Generate Payment Link
      *
-     * @param  \belenka\Everifin\Client\Model\InlineObject3 $inline_object3 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentLinkData $PaymentLinkData (optional)
      *
      * @throws \belenka\Everifin\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \belenka\Everifin\Client\Model\InlineResponse2007|\belenka\Everifin\Client\Model\InlineResponse401|\belenka\Everifin\Client\Model\InlineResponse4221, HTTP status code, HTTP response headers (array of strings)
      */
-    public function generatePaymentLinkWithHttpInfo($inline_object3 = null)
+    public function generatePaymentLinkWithHttpInfo($PaymentLinkData = null)
     {
-        $request = $this->generatePaymentLinkRequest($inline_object3);
+        $request = $this->generatePaymentLinkRequest($PaymentLinkData);
 
         try {
             $options = $this->createHttpClientOption();
@@ -250,14 +250,14 @@ class RedirectFlowApi
      *
      * Generate Payment Link
      *
-     * @param  \belenka\Everifin\Client\Model\InlineObject3 $inline_object3 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentLinkData $PaymentLinkData (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function generatePaymentLinkAsync($inline_object3 = null)
+    public function generatePaymentLinkAsync($PaymentLinkData = null)
     {
-        return $this->generatePaymentLinkAsyncWithHttpInfo($inline_object3)
+        return $this->generatePaymentLinkAsyncWithHttpInfo($PaymentLinkData)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -270,15 +270,15 @@ class RedirectFlowApi
      *
      * Generate Payment Link
      *
-     * @param  \belenka\Everifin\Client\Model\InlineObject3 $inline_object3 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentLinkData $PaymentLinkData (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function generatePaymentLinkAsyncWithHttpInfo($inline_object3 = null)
+    public function generatePaymentLinkAsyncWithHttpInfo($PaymentLinkData = null)
     {
         $returnType = '\belenka\Everifin\Client\Model\InlineResponse2007';
-        $request = $this->generatePaymentLinkRequest($inline_object3);
+        $request = $this->generatePaymentLinkRequest($PaymentLinkData);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -316,12 +316,12 @@ class RedirectFlowApi
     /**
      * Create request for operation 'generatePaymentLink'
      *
-     * @param  \belenka\Everifin\Client\Model\InlineObject3 $inline_object3 (optional)
+     * @param  \belenka\Everifin\Client\Model\PaymentLinkData $PaymentLinkData (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function generatePaymentLinkRequest($inline_object3 = null)
+    public function generatePaymentLinkRequest($PaymentLinkData = null)
     {
 
         $resourcePath = '/api/v1/link';
@@ -347,11 +347,11 @@ class RedirectFlowApi
         }
 
         // for model (json/xml)
-        if (isset($inline_object3)) {
+        if (isset($PaymentLinkData)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($inline_object3));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($PaymentLinkData));
             } else {
-                $httpBody = $inline_object3;
+                $httpBody = $PaymentLinkData;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

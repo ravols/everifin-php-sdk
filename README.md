@@ -112,7 +112,7 @@ Class | Method | HTTP request | Description
 
 - [InlineObject1](docs/Model/InlineObject1.md)
 - [InlineObject2](docs/Model/InlineObject2.md)
-- [InlineObject3](docs/Model/InlineObject3.md)
+- [PaymentLinkData](docs/Model/PaymentLinkData.md)
 - [InlineResponse200](docs/Model/InlineResponse200.md)
 - [InlineResponse2001](docs/Model/InlineResponse2001.md)
 - [InlineResponse2001Data](docs/Model/InlineResponse2001Data.md)

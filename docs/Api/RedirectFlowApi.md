@@ -10,7 +10,7 @@ Method | HTTP request | Description
 ## `generatePaymentLink()`
 
 ```php
-generatePaymentLink($inline_object3): \belenka\Everifin\Client\Model\InlineResponse2007
+generatePaymentLink($PaymentLinkData): \belenka\Everifin\Client\Model\InlineResponse2007
 ```
 
 Generate Payment Link
@@ -31,10 +31,10 @@ $client = new \GuzzleHttp\Client();
 
 $apiInstance = new \belenka\Everifin\Client\Api\RedirectFlowApi($client, $configuration);
 
-$inline_object3 = new \belenka\Everifin\Client\Model\InlineObject3(); 
+$PaymentLinkData = new \belenka\Everifin\Client\Model\PaymentLinkData(); 
 
 try {
-    $result = $apiInstance->generatePaymentLink($inline_object3);
+    $result = $apiInstance->generatePaymentLink($PaymentLinkData);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RedirectFlowApi->generatePaymentLink: ', $e->getMessage(), PHP_EOL;
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inline_object3** | [**\belenka\Everifin\Client\Model\InlineObject3**](../Model/InlineObject3.md)|  | [optional]
+ **PaymentLinkData** | [**\belenka\Everifin\Client\Model\PaymentLinkData**](../Model/PaymentLinkData.md)|  | [optional]
 
 ### Return type
 

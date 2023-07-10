@@ -1,4 +1,4 @@
-# # InlineObject3
+# # PaymentLinkData
 
 ## Properties
 
