@@ -1,4 +1,4 @@
-# OpenAPI\Client\GeneralApi
+# belenka\Everifin\Client\GeneralApi
 
 All URIs are relative to https://app.stage.everifin.com.
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 ## `getClientAccessToken()`
 
 ```php
-getClientAccessToken($client_id, $client_secret, $grant_type): \OpenAPI\Client\Model\InlineResponse200
+getClientAccessToken($client_id, $client_secret, $grant_type): \belenka\Everifin\Client\Model\InlineResponse200
 ```
 
 Get Client Access Token
@@ -27,7 +27,7 @@ Get Client Access Token
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new OpenAPI\Client\Api\GeneralApi(
+$apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\belenka\Everifin\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ No authorization required
 ## `getClientBanks()`
 
 ```php
-getClientBanks($country_code): \OpenAPI\Client\Model\InlineResponse2001
+getClientBanks($country_code): \belenka\Everifin\Client\Model\InlineResponse2001
 ```
 
 Get Client Banks
@@ -85,7 +85,7 @@ This endpoint provides list of available banks for payments.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new OpenAPI\Client\Api\GeneralApi(
+$apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\belenka\Everifin\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ No authorization required
 ## `getPaymentDetail()`
 
 ```php
-getPaymentDetail($id): \OpenAPI\Client\Model\InlineResponse2004
+getPaymentDetail($id): \belenka\Everifin\Client\Model\InlineResponse2004
 ```
 
 Get payment detail
@@ -139,7 +139,7 @@ Endpoint to get detailed info about a single payment from Everifin PayGate.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new OpenAPI\Client\Api\GeneralApi(
+$apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\belenka\Everifin\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ No authorization required
 ## `getPayments()`
 
 ```php
-getPayments($page, $count_per_page, $sort, $id, $instruction_id, $recipient_iban, $sender_bank_id, $amount, $currency, $variable_symbol, $specific_symbol, $constant_symbol, $reference, $payment_message, $status, $step, $redirect_url): \OpenAPI\Client\Model\InlineResponse2002
+getPayments($page, $count_per_page, $sort, $id, $instruction_id, $recipient_iban, $sender_bank_id, $amount, $currency, $variable_symbol, $specific_symbol, $constant_symbol, $reference, $payment_message, $status, $step, $redirect_url): \belenka\Everifin\Client\Model\InlineResponse2002
 ```
 
 Get payments
@@ -193,7 +193,7 @@ Endpoint to get payments from Everifin PayGate.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new OpenAPI\Client\Api\GeneralApi(
+$apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\belenka\Everifin\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -266,7 +266,7 @@ No authorization required
 ## `withdrawPayment()`
 
 ```php
-withdrawPayment($id): \OpenAPI\Client\Model\InlineResponse2005
+withdrawPayment($id): \belenka\Everifin\Client\Model\InlineResponse2005
 ```
 
 Withdraw payment
@@ -279,7 +279,7 @@ Endpoint to withdraw a payment from Everifin payment gate, before it has been au
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new OpenAPI\Client\Api\GeneralApi(
+$apiInstance = new belenka\Everifin\Client\Api\GeneralApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\belenka\Everifin\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 7.3
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace belenka\Everifin\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \belenka\Everifin\Client\ObjectSerializer;
 
 /**
  * InlineResponse2002Meta Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -59,7 +59,7 @@ class InlineResponse2002Meta implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'pagination' => '\OpenAPI\Client\Model\InlineResponse2002MetaPagination',
+        'pagination' => '\belenka\Everifin\Client\Model\InlineResponse2002MetaPagination',
         'status' => 'string'
     ];
 
@@ -214,7 +214,7 @@ class InlineResponse2002Meta implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets pagination
      *
-     * @return \OpenAPI\Client\Model\InlineResponse2002MetaPagination|null
+     * @return \belenka\Everifin\Client\Model\InlineResponse2002MetaPagination|null
      */
     public function getPagination()
     {
@@ -224,7 +224,7 @@ class InlineResponse2002Meta implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets pagination
      *
-     * @param \OpenAPI\Client\Model\InlineResponse2002MetaPagination|null $pagination pagination
+     * @param \belenka\Everifin\Client\Model\InlineResponse2002MetaPagination|null $pagination pagination
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.3
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace OpenAPI\Client\Test\Api;
+namespace belenka\Everifin\Client\Test\Api;
 
-use \OpenAPI\Client\Configuration;
-use \OpenAPI\Client\ApiException;
-use \OpenAPI\Client\ObjectSerializer;
+use \belenka\Everifin\Client\Configuration;
+use \belenka\Everifin\Client\ApiException;
+use \belenka\Everifin\Client\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * RedirectFlowApiTest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

@@ -5,7 +5,7 @@
  * PHP version 7.3
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace belenka\Everifin\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \belenka\Everifin\Client\ObjectSerializer;
 
 /**
  * InlineResponse2004 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -59,8 +59,8 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\OpenAPI\Client\Model\InlineResponse2004Data',
-        'meta' => '\OpenAPI\Client\Model\InlineResponse2001Meta'
+        'data' => '\belenka\Everifin\Client\Model\InlineResponse2004Data',
+        'meta' => '\belenka\Everifin\Client\Model\InlineResponse2001Meta'
     ];
 
     /**
@@ -214,7 +214,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\InlineResponse2004Data|null
+     * @return \belenka\Everifin\Client\Model\InlineResponse2004Data|null
      */
     public function getData()
     {
@@ -224,7 +224,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\InlineResponse2004Data|null $data data
+     * @param \belenka\Everifin\Client\Model\InlineResponse2004Data|null $data data
      *
      * @return self
      */
@@ -238,7 +238,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets meta
      *
-     * @return \OpenAPI\Client\Model\InlineResponse2001Meta|null
+     * @return \belenka\Everifin\Client\Model\InlineResponse2001Meta|null
      */
     public function getMeta()
     {
@@ -248,7 +248,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets meta
      *
-     * @param \OpenAPI\Client\Model\InlineResponse2001Meta|null $meta meta
+     * @param \belenka\Everifin\Client\Model\InlineResponse2001Meta|null $meta meta
      *
      * @return self
      */

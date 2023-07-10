@@ -5,7 +5,7 @@
  * PHP version 7.3
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace belenka\Everifin\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \belenka\Everifin\Client\ObjectSerializer;
 
 /**
  * InlineResponse4002 Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -59,8 +59,8 @@ class InlineResponse4002 implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\OpenAPI\Client\Model\InlineResponse4002Errors[]',
-        'meta' => '\OpenAPI\Client\Model\InlineResponse401Meta'
+        'errors' => '\belenka\Everifin\Client\Model\InlineResponse4002Errors[]',
+        'meta' => '\belenka\Everifin\Client\Model\InlineResponse401Meta'
     ];
 
     /**
@@ -214,7 +214,7 @@ class InlineResponse4002 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\InlineResponse4002Errors[]|null
+     * @return \belenka\Everifin\Client\Model\InlineResponse4002Errors[]|null
      */
     public function getErrors()
     {
@@ -224,7 +224,7 @@ class InlineResponse4002 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\InlineResponse4002Errors[]|null $errors errors
+     * @param \belenka\Everifin\Client\Model\InlineResponse4002Errors[]|null $errors errors
      *
      * @return self
      */
@@ -238,7 +238,7 @@ class InlineResponse4002 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets meta
      *
-     * @return \OpenAPI\Client\Model\InlineResponse401Meta|null
+     * @return \belenka\Everifin\Client\Model\InlineResponse401Meta|null
      */
     public function getMeta()
     {
@@ -248,7 +248,7 @@ class InlineResponse4002 implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets meta
      *
-     * @param \OpenAPI\Client\Model\InlineResponse401Meta|null $meta meta
+     * @param \belenka\Everifin\Client\Model\InlineResponse401Meta|null $meta meta
      *
      * @return self
      */

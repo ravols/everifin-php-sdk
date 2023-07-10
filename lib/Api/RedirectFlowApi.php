@@ -4,7 +4,7 @@
  * PHP version 7.3
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace belenka\Everifin\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\ConnectException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use belenka\Everifin\Client\ApiException;
+use belenka\Everifin\Client\Configuration;
+use belenka\Everifin\Client\HeaderSelector;
+use belenka\Everifin\Client\ObjectSerializer;
 
 /**
  * RedirectFlowApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,11 +120,11 @@ class RedirectFlowApi
      *
      * Generate Payment Link
      *
-     * @param  \OpenAPI\Client\Model\InlineObject3 $inline_object3 inline_object3 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject3 $inline_object3 inline_object3 (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \belenka\Everifin\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2007|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse4221
+     * @return \belenka\Everifin\Client\Model\InlineResponse2007|\belenka\Everifin\Client\Model\InlineResponse401|\belenka\Everifin\Client\Model\InlineResponse4221
      */
     public function generatePaymentLink($inline_object3 = null)
     {
@@ -137,11 +137,11 @@ class RedirectFlowApi
      *
      * Generate Payment Link
      *
-     * @param  \OpenAPI\Client\Model\InlineObject3 $inline_object3 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject3 $inline_object3 (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \belenka\Everifin\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2007|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse4221, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \belenka\Everifin\Client\Model\InlineResponse2007|\belenka\Everifin\Client\Model\InlineResponse401|\belenka\Everifin\Client\Model\InlineResponse4221, HTTP status code, HTTP response headers (array of strings)
      */
     public function generatePaymentLinkWithHttpInfo($inline_object3 = null)
     {
@@ -184,44 +184,44 @@ class RedirectFlowApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse2007' === '\SplFileObject') {
+                    if ('\belenka\Everifin\Client\Model\InlineResponse2007' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2007', []),
+                        ObjectSerializer::deserialize($content, '\belenka\Everifin\Client\Model\InlineResponse2007', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
+                    if ('\belenka\Everifin\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse401', []),
+                        ObjectSerializer::deserialize($content, '\belenka\Everifin\Client\Model\InlineResponse401', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\InlineResponse4221' === '\SplFileObject') {
+                    if ('\belenka\Everifin\Client\Model\InlineResponse4221' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse4221', []),
+                        ObjectSerializer::deserialize($content, '\belenka\Everifin\Client\Model\InlineResponse4221', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2007';
+            $returnType = '\belenka\Everifin\Client\Model\InlineResponse2007';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -239,7 +239,7 @@ class RedirectFlowApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2007',
+                        '\belenka\Everifin\Client\Model\InlineResponse2007',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -247,7 +247,7 @@ class RedirectFlowApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse401',
+                        '\belenka\Everifin\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class RedirectFlowApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse4221',
+                        '\belenka\Everifin\Client\Model\InlineResponse4221',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class RedirectFlowApi
      *
      * Generate Payment Link
      *
-     * @param  \OpenAPI\Client\Model\InlineObject3 $inline_object3 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject3 $inline_object3 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -290,14 +290,14 @@ class RedirectFlowApi
      *
      * Generate Payment Link
      *
-     * @param  \OpenAPI\Client\Model\InlineObject3 $inline_object3 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject3 $inline_object3 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function generatePaymentLinkAsyncWithHttpInfo($inline_object3 = null)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2007';
+        $returnType = '\belenka\Everifin\Client\Model\InlineResponse2007';
         $request = $this->generatePaymentLinkRequest($inline_object3);
 
         return $this->client
@@ -336,7 +336,7 @@ class RedirectFlowApi
     /**
      * Create request for operation 'generatePaymentLink'
      *
-     * @param  \OpenAPI\Client\Model\InlineObject3 $inline_object3 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject3 $inline_object3 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -4,7 +4,7 @@
  * PHP version 7.3
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace belenka\Everifin\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\ConnectException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use belenka\Everifin\Client\ApiException;
+use belenka\Everifin\Client\Configuration;
+use belenka\Everifin\Client\HeaderSelector;
+use belenka\Everifin\Client\ObjectSerializer;
 
 /**
  * EmbeddedFlowApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -122,11 +122,11 @@ class EmbeddedFlowApi
      *
      * @param  string $x_ef_sender_ip x_ef_sender_ip (optional)
      * @param  string $x_ef_sender_user_agent x_ef_sender_user_agent (optional)
-     * @param  \OpenAPI\Client\Model\InlineObject1 $inline_object1 inline_object1 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject1 $inline_object1 inline_object1 (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \belenka\Everifin\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2003|\OpenAPI\Client\Model\InlineResponse4001|\OpenAPI\Client\Model\InlineResponse401
+     * @return \belenka\Everifin\Client\Model\InlineResponse2003|\belenka\Everifin\Client\Model\InlineResponse4001|\belenka\Everifin\Client\Model\InlineResponse401
      */
     public function initPayment($x_ef_sender_ip = null, $x_ef_sender_user_agent = null, $inline_object1 = null)
     {
@@ -141,11 +141,11 @@ class EmbeddedFlowApi
      *
      * @param  string $x_ef_sender_ip (optional)
      * @param  string $x_ef_sender_user_agent (optional)
-     * @param  \OpenAPI\Client\Model\InlineObject1 $inline_object1 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject1 $inline_object1 (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \belenka\Everifin\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2003|\OpenAPI\Client\Model\InlineResponse4001|\OpenAPI\Client\Model\InlineResponse401, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \belenka\Everifin\Client\Model\InlineResponse2003|\belenka\Everifin\Client\Model\InlineResponse4001|\belenka\Everifin\Client\Model\InlineResponse401, HTTP status code, HTTP response headers (array of strings)
      */
     public function initPaymentWithHttpInfo($x_ef_sender_ip = null, $x_ef_sender_user_agent = null, $inline_object1 = null)
     {
@@ -188,44 +188,44 @@ class EmbeddedFlowApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse2003' === '\SplFileObject') {
+                    if ('\belenka\Everifin\Client\Model\InlineResponse2003' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2003', []),
+                        ObjectSerializer::deserialize($content, '\belenka\Everifin\Client\Model\InlineResponse2003', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\InlineResponse4001' === '\SplFileObject') {
+                    if ('\belenka\Everifin\Client\Model\InlineResponse4001' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse4001', []),
+                        ObjectSerializer::deserialize($content, '\belenka\Everifin\Client\Model\InlineResponse4001', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
+                    if ('\belenka\Everifin\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse401', []),
+                        ObjectSerializer::deserialize($content, '\belenka\Everifin\Client\Model\InlineResponse401', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2003';
+            $returnType = '\belenka\Everifin\Client\Model\InlineResponse2003';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -243,7 +243,7 @@ class EmbeddedFlowApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2003',
+                        '\belenka\Everifin\Client\Model\InlineResponse2003',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -251,7 +251,7 @@ class EmbeddedFlowApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse4001',
+                        '\belenka\Everifin\Client\Model\InlineResponse4001',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -259,7 +259,7 @@ class EmbeddedFlowApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse401',
+                        '\belenka\Everifin\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -276,7 +276,7 @@ class EmbeddedFlowApi
      *
      * @param  string $x_ef_sender_ip (optional)
      * @param  string $x_ef_sender_user_agent (optional)
-     * @param  \OpenAPI\Client\Model\InlineObject1 $inline_object1 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject1 $inline_object1 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -298,14 +298,14 @@ class EmbeddedFlowApi
      *
      * @param  string $x_ef_sender_ip (optional)
      * @param  string $x_ef_sender_user_agent (optional)
-     * @param  \OpenAPI\Client\Model\InlineObject1 $inline_object1 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject1 $inline_object1 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function initPaymentAsyncWithHttpInfo($x_ef_sender_ip = null, $x_ef_sender_user_agent = null, $inline_object1 = null)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2003';
+        $returnType = '\belenka\Everifin\Client\Model\InlineResponse2003';
         $request = $this->initPaymentRequest($x_ef_sender_ip, $x_ef_sender_user_agent, $inline_object1);
 
         return $this->client
@@ -346,7 +346,7 @@ class EmbeddedFlowApi
      *
      * @param  string $x_ef_sender_ip (optional)
      * @param  string $x_ef_sender_user_agent (optional)
-     * @param  \OpenAPI\Client\Model\InlineObject1 $inline_object1 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject1 $inline_object1 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -442,11 +442,11 @@ class EmbeddedFlowApi
      * Process Payment
      *
      * @param  string $id id (required)
-     * @param  \OpenAPI\Client\Model\InlineObject2 $inline_object2 inline_object2 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject2 $inline_object2 inline_object2 (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \belenka\Everifin\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2006|\OpenAPI\Client\Model\InlineResponse4003|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse422
+     * @return \belenka\Everifin\Client\Model\InlineResponse2006|\belenka\Everifin\Client\Model\InlineResponse4003|\belenka\Everifin\Client\Model\InlineResponse401|\belenka\Everifin\Client\Model\InlineResponse422
      */
     public function processPayment($id, $inline_object2 = null)
     {
@@ -460,11 +460,11 @@ class EmbeddedFlowApi
      * Process Payment
      *
      * @param  string $id (required)
-     * @param  \OpenAPI\Client\Model\InlineObject2 $inline_object2 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject2 $inline_object2 (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \belenka\Everifin\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2006|\OpenAPI\Client\Model\InlineResponse4003|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse422, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \belenka\Everifin\Client\Model\InlineResponse2006|\belenka\Everifin\Client\Model\InlineResponse4003|\belenka\Everifin\Client\Model\InlineResponse401|\belenka\Everifin\Client\Model\InlineResponse422, HTTP status code, HTTP response headers (array of strings)
      */
     public function processPaymentWithHttpInfo($id, $inline_object2 = null)
     {
@@ -507,56 +507,56 @@ class EmbeddedFlowApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse2006' === '\SplFileObject') {
+                    if ('\belenka\Everifin\Client\Model\InlineResponse2006' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2006', []),
+                        ObjectSerializer::deserialize($content, '\belenka\Everifin\Client\Model\InlineResponse2006', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\InlineResponse4003' === '\SplFileObject') {
+                    if ('\belenka\Everifin\Client\Model\InlineResponse4003' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse4003', []),
+                        ObjectSerializer::deserialize($content, '\belenka\Everifin\Client\Model\InlineResponse4003', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
+                    if ('\belenka\Everifin\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse401', []),
+                        ObjectSerializer::deserialize($content, '\belenka\Everifin\Client\Model\InlineResponse401', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\InlineResponse422' === '\SplFileObject') {
+                    if ('\belenka\Everifin\Client\Model\InlineResponse422' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse422', []),
+                        ObjectSerializer::deserialize($content, '\belenka\Everifin\Client\Model\InlineResponse422', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2006';
+            $returnType = '\belenka\Everifin\Client\Model\InlineResponse2006';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -574,7 +574,7 @@ class EmbeddedFlowApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2006',
+                        '\belenka\Everifin\Client\Model\InlineResponse2006',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -582,7 +582,7 @@ class EmbeddedFlowApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse4003',
+                        '\belenka\Everifin\Client\Model\InlineResponse4003',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -590,7 +590,7 @@ class EmbeddedFlowApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse401',
+                        '\belenka\Everifin\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -598,7 +598,7 @@ class EmbeddedFlowApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse422',
+                        '\belenka\Everifin\Client\Model\InlineResponse422',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -614,7 +614,7 @@ class EmbeddedFlowApi
      * Process Payment
      *
      * @param  string $id (required)
-     * @param  \OpenAPI\Client\Model\InlineObject2 $inline_object2 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject2 $inline_object2 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -635,14 +635,14 @@ class EmbeddedFlowApi
      * Process Payment
      *
      * @param  string $id (required)
-     * @param  \OpenAPI\Client\Model\InlineObject2 $inline_object2 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject2 $inline_object2 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function processPaymentAsyncWithHttpInfo($id, $inline_object2 = null)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2006';
+        $returnType = '\belenka\Everifin\Client\Model\InlineResponse2006';
         $request = $this->processPaymentRequest($id, $inline_object2);
 
         return $this->client
@@ -682,7 +682,7 @@ class EmbeddedFlowApi
      * Create request for operation 'processPayment'
      *
      * @param  string $id (required)
-     * @param  \OpenAPI\Client\Model\InlineObject2 $inline_object2 (optional)
+     * @param  \belenka\Everifin\Client\Model\InlineObject2 $inline_object2 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

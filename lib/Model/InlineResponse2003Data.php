@@ -5,7 +5,7 @@
  * PHP version 7.3
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace belenka\Everifin\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \belenka\Everifin\Client\ObjectSerializer;
 
 /**
  * InlineResponse2003Data Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -62,7 +62,7 @@ class InlineResponse2003Data implements ModelInterface, ArrayAccess, \JsonSerial
         'description' => 'string',
         'id' => 'string',
         'input_message' => 'string',
-        'input_set' => '\OpenAPI\Client\Model\InlineResponse2003DataInputSet',
+        'input_set' => '\belenka\Everifin\Client\Model\InlineResponse2003DataInputSet',
         'status' => 'string',
         'type' => 'string'
     ];
@@ -310,7 +310,7 @@ class InlineResponse2003Data implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets input_set
      *
-     * @return \OpenAPI\Client\Model\InlineResponse2003DataInputSet|null
+     * @return \belenka\Everifin\Client\Model\InlineResponse2003DataInputSet|null
      */
     public function getInputSet()
     {
@@ -320,7 +320,7 @@ class InlineResponse2003Data implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets input_set
      *
-     * @param \OpenAPI\Client\Model\InlineResponse2003DataInputSet|null $input_set input_set
+     * @param \belenka\Everifin\Client\Model\InlineResponse2003DataInputSet|null $input_set input_set
      *
      * @return self
      */

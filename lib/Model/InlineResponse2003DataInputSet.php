@@ -5,7 +5,7 @@
  * PHP version 7.3
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace belenka\Everifin\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \belenka\Everifin\Client\ObjectSerializer;
 
 /**
  * InlineResponse2003DataInputSet Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  belenka\Everifin\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -59,8 +59,8 @@ class InlineResponse2003DataInputSet implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        '_0' => '\OpenAPI\Client\Model\InlineResponse2003DataInputSet0',
-        '_1' => '\OpenAPI\Client\Model\InlineResponse2003DataInputSet1'
+        '_0' => '\belenka\Everifin\Client\Model\InlineResponse2003DataInputSet0',
+        '_1' => '\belenka\Everifin\Client\Model\InlineResponse2003DataInputSet1'
     ];
 
     /**
@@ -214,7 +214,7 @@ class InlineResponse2003DataInputSet implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets _0
      *
-     * @return \OpenAPI\Client\Model\InlineResponse2003DataInputSet0|null
+     * @return \belenka\Everifin\Client\Model\InlineResponse2003DataInputSet0|null
      */
     public function get0()
     {
@@ -224,7 +224,7 @@ class InlineResponse2003DataInputSet implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets _0
      *
-     * @param \OpenAPI\Client\Model\InlineResponse2003DataInputSet0|null $_0 _0
+     * @param \belenka\Everifin\Client\Model\InlineResponse2003DataInputSet0|null $_0 _0
      *
      * @return self
      */
@@ -238,7 +238,7 @@ class InlineResponse2003DataInputSet implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets _1
      *
-     * @return \OpenAPI\Client\Model\InlineResponse2003DataInputSet1|null
+     * @return \belenka\Everifin\Client\Model\InlineResponse2003DataInputSet1|null
      */
     public function get1()
     {
@@ -248,7 +248,7 @@ class InlineResponse2003DataInputSet implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets _1
      *
-     * @param \OpenAPI\Client\Model\InlineResponse2003DataInputSet1|null $_1 _1
+     * @param \belenka\Everifin\Client\Model\InlineResponse2003DataInputSet1|null $_1 _1
      *
      * @return self
      */

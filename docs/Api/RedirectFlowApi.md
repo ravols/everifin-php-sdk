@@ -1,4 +1,4 @@
-# OpenAPI\Client\RedirectFlowApi
+# belenka\Everifin\Client\RedirectFlowApi
 
 All URIs are relative to https://app.stage.everifin.com.
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 ## `generatePaymentLink()`
 
 ```php
-generatePaymentLink($inline_object3): \OpenAPI\Client\Model\InlineResponse2007
+generatePaymentLink($inline_object3): \belenka\Everifin\Client\Model\InlineResponse2007
 ```
 
 Generate Payment Link
@@ -25,12 +25,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\RedirectFlowApi(
+$apiInstance = new belenka\Everifin\Client\Api\RedirectFlowApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$inline_object3 = new \OpenAPI\Client\Model\InlineObject3(); // \OpenAPI\Client\Model\InlineObject3
+$inline_object3 = new \belenka\Everifin\Client\Model\InlineObject3(); // \belenka\Everifin\Client\Model\InlineObject3
 
 try {
     $result = $apiInstance->generatePaymentLink($inline_object3);
@@ -44,11 +44,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inline_object3** | [**\OpenAPI\Client\Model\InlineObject3**](../Model/InlineObject3.md)|  | [optional]
+ **inline_object3** | [**\belenka\Everifin\Client\Model\InlineObject3**](../Model/InlineObject3.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
+[**\belenka\Everifin\Client\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
 
 ### Authorization
 
