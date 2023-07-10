@@ -51,7 +51,9 @@ class PaymentLinkData implements ModelInterface, ArrayAccess, \JsonSerializable
         'reference' => 'mixed',
         'specific_symbol' => 'string',
         'user_locale' => 'string',
-        'variable_symbol' => 'string'
+        'variable_symbol' => 'string',
+        'instruction_id' => 'string',
+        'hookData' => 'string'
     ];
 
     /**
@@ -72,7 +74,9 @@ class PaymentLinkData implements ModelInterface, ArrayAccess, \JsonSerializable
         'reference' => null,
         'specific_symbol' => null,
         'user_locale' => null,
-        'variable_symbol' => null
+        'variable_symbol' => null,
+        'instruction_id' => null,
+        'hookData' => null
     ];
 
     /**
@@ -112,7 +116,9 @@ class PaymentLinkData implements ModelInterface, ArrayAccess, \JsonSerializable
         'reference' => 'reference',
         'specific_symbol' => 'specificSymbol',
         'user_locale' => 'userLocale',
-        'variable_symbol' => 'variableSymbol'
+        'variable_symbol' => 'variableSymbol',
+        'instruction_id' => 'instructionId',
+        'hookData' => 'hookData'
     ];
 
     /**
@@ -131,7 +137,9 @@ class PaymentLinkData implements ModelInterface, ArrayAccess, \JsonSerializable
         'reference' => 'setReference',
         'specific_symbol' => 'setSpecificSymbol',
         'user_locale' => 'setUserLocale',
-        'variable_symbol' => 'setVariableSymbol'
+        'variable_symbol' => 'setVariableSymbol',
+        'instruction_id' => 'setInstructionId',
+        'hookData' => 'setHookData'
     ];
 
     /**
@@ -150,7 +158,9 @@ class PaymentLinkData implements ModelInterface, ArrayAccess, \JsonSerializable
         'reference' => 'getReference',
         'specific_symbol' => 'getSpecificSymbol',
         'user_locale' => 'getUserLocale',
-        'variable_symbol' => 'getVariableSymbol'
+        'variable_symbol' => 'getVariableSymbol',
+        'instruction_id' => 'getInstructionId',
+        'hookData' => 'getHookData'
     ];
 
     /**
@@ -221,6 +231,8 @@ class PaymentLinkData implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['specific_symbol'] = $data['specific_symbol'] ?? null;
         $this->container['user_locale'] = $data['user_locale'] ?? null;
         $this->container['variable_symbol'] = $data['variable_symbol'] ?? null;
+        $this->container['instruction_id'] = $data['instruction_id'] ?? null;
+        $this->container['hookData'] = $data['hookData'] ?? null;
     }
 
     /**
@@ -267,6 +279,54 @@ class PaymentLinkData implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setAmount($amount)
     {
         $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets instruction_id
+     *
+     * @return string|null
+     */
+    public function getInstructionId()
+    {
+        return $this->container['instruction_id'];
+    }
+
+    /**
+     * Sets instruction_id
+     *
+     * @param string|null $instruction_id instruction_id
+     *
+     * @return self
+     */
+    public function setInstructionId($instruction_id)
+    {
+        $this->container['instruction_id'] = $instruction_id;
+
+        return $this;
+    }
+
+    /** 
+     * Gets hookData
+     * 
+     * @return self|null
+     */
+    public function getHookData()
+    {
+        return $this->container['hookData'];
+    }
+
+    /**
+     * Sets hookData
+     * 
+     * @param string|null $hookData hookData
+     * 
+     * @return self
+     */
+    public function setHookData($hookData)
+    {
+        $this->container['hookData'] = $hookData;
 
         return $this;
     }
