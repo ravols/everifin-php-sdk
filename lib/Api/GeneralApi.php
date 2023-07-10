@@ -622,7 +622,6 @@ class GeneralApi
      */
     public function getClientBanksRequest($country_code = null)
     {
-
         $resourcePath = '/api/v1/banks';
         $formParams = [];
         $queryParams = [];
@@ -632,18 +631,14 @@ class GeneralApi
 
         // query params
         if ($country_code !== null) {
-            if('form' === 'form' && is_array($country_code)) {
+            if(is_array($country_code)) {
                 foreach($country_code as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['countryCode'] = $country_code;
             }
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -685,6 +680,10 @@ class GeneralApi
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        if ($this->config->getAccessToken()) {
+            $defaultHeaders['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
         }
 
         $headers = array_merge(
@@ -976,6 +975,10 @@ class GeneralApi
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        if ($this->config->getAccessToken()) {
+            $defaultHeaders['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
         }
 
         $headers = array_merge(
