@@ -7,17 +7,13 @@
  * @category Class
  * @package  belenka\Everifin\Client
 
- * 
+ *
  */
-
-
-
-
 
 namespace belenka\Everifin\Client\Model;
 
-use \ArrayAccess;
-use \belenka\Everifin\Client\ObjectSerializer;
+use ArrayAccess;
+use belenka\Everifin\Client\ObjectSerializer;
 
 /**
  * InlineResponse2004Data Class Doc Comment
@@ -25,7 +21,7 @@ use \belenka\Everifin\Client\ObjectSerializer;
  * @category Class
  * @package  belenka\Everifin\Client
 
- * 
+ *
  * @implements \ArrayAccess<TKey, TValue>
  * @template TKey int|null
  * @template TValue mixed|null
@@ -61,7 +57,8 @@ class InlineResponse2004Data implements ModelInterface, ArrayAccess, \JsonSerial
         'sender_iban' => 'mixed',
         'specific_symbol' => 'mixed',
         'status' => 'string',
-        'variable_symbol' => 'string'
+        'variable_symbol' => 'string',
+        'reason_code' => 'string',
     ];
 
     /**
@@ -86,7 +83,8 @@ class InlineResponse2004Data implements ModelInterface, ArrayAccess, \JsonSerial
         'sender_iban' => null,
         'specific_symbol' => null,
         'status' => null,
-        'variable_symbol' => null
+        'variable_symbol' => null,
+        'reason_code' => null,
     ];
 
     /**
@@ -130,7 +128,8 @@ class InlineResponse2004Data implements ModelInterface, ArrayAccess, \JsonSerial
         'sender_iban' => 'senderIban',
         'specific_symbol' => 'specificSymbol',
         'status' => 'status',
-        'variable_symbol' => 'variableSymbol'
+        'variable_symbol' => 'variableSymbol',
+        'reason_code' => 'reasonCode',
     ];
 
     /**
@@ -153,7 +152,8 @@ class InlineResponse2004Data implements ModelInterface, ArrayAccess, \JsonSerial
         'sender_iban' => 'setSenderIban',
         'specific_symbol' => 'setSpecificSymbol',
         'status' => 'setStatus',
-        'variable_symbol' => 'setVariableSymbol'
+        'variable_symbol' => 'setVariableSymbol',
+        'reason_code' => 'setReasonCode',
     ];
 
     /**
@@ -176,7 +176,8 @@ class InlineResponse2004Data implements ModelInterface, ArrayAccess, \JsonSerial
         'sender_iban' => 'getSenderIban',
         'specific_symbol' => 'getSpecificSymbol',
         'status' => 'getStatus',
-        'variable_symbol' => 'getVariableSymbol'
+        'variable_symbol' => 'getVariableSymbol',
+        'reason_code' => 'getReasonCode',
     ];
 
     /**
@@ -251,6 +252,7 @@ class InlineResponse2004Data implements ModelInterface, ArrayAccess, \JsonSerial
         $this->container['specific_symbol'] = $data['specific_symbol'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
         $this->container['variable_symbol'] = $data['variable_symbol'] ?? null;
+        $this->container['reason_code'] = $data['reason_code'] ?? null;
     }
 
     /**
@@ -275,7 +277,6 @@ class InlineResponse2004Data implements ModelInterface, ArrayAccess, \JsonSerial
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets amount
@@ -636,12 +637,25 @@ class InlineResponse2004Data implements ModelInterface, ArrayAccess, \JsonSerial
 
         return $this;
     }
+
+    public function getReasonCode()
+    {
+        return $this->container['reason_code'];
+    }
+
+    public function setReasonCode($reason_code)
+    {
+        $this->container['reason_code'] = $reason_code;
+
+        return $this;
+    }
+
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param int $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {
@@ -651,7 +665,7 @@ class InlineResponse2004Data implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param int $offset Offset
      *
      * @return mixed|null
      */
@@ -668,7 +682,7 @@ class InlineResponse2004Data implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -680,11 +694,11 @@ class InlineResponse2004Data implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param int $offset Offset
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }
@@ -698,7 +712,7 @@ class InlineResponse2004Data implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -724,5 +738,3 @@ class InlineResponse2004Data implements ModelInterface, ArrayAccess, \JsonSerial
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-
